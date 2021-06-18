@@ -11,3 +11,6 @@ genclient:
 
 build-generator:
 	cd openapi-generator && mvn clean install -U -DskipTests
+
+clean:
+	find ./apigroups -mindepth 1 ! -regex '^./apigroups/test/.*' -delete
