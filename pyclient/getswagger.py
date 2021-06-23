@@ -4,7 +4,9 @@ import re
 import os
 import sys
 import logging
-from utils import update_psm_config, get_psm_config
+from utils import get_psm_config
+import warnings
+warnings.simplefilter("ignore")
 
 HOME = os.environ["HOME"]
 psm_config_path = HOME+"/.psm/config.json"
