@@ -22,7 +22,7 @@ def get_psm_config():
         if foldersplit[-1]:
             dirpath = (os.sep).join(foldersplit[:-1])
             if not os.path.exists(dirpath):
-                os.makedirs((os.sep).join(foldersplit))
+                os.makedirs((os.sep).join(foldersplit[:-1]))
             config_data = update_psm_config(config_path)
         else:
             logging.error("Invalid PSM config path")
