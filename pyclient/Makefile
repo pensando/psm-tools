@@ -14,5 +14,8 @@ build-generator:
 	mkdir -p bin
 	mv openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar bin/openapi-generator-cli.jar
 
-make tests:
+tests:
 	cd utils && python3 test_apps.py 
+
+clean:
+	find ./apigroups -mindepth 1 ! -regex '^./apigroups/test/.*' -delete
