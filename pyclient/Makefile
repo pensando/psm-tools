@@ -11,3 +11,5 @@ genclient:
 
 build-generator:
 	cd openapi-generator && mvn clean install -U -DskipTests
+	mkdir -p bin
+	mv openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar bin/openapi-generator-cli.jar

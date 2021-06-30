@@ -3,3 +3,4 @@ apigroups/
 psmapi/
 swagger/
 *__pycache__*
+bin/

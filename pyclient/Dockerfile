@@ -15,4 +15,6 @@ RUN apt install -y default-jdk maven
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PYTHONPATH=/pyclient
 
+COPY bin/openapi-generator-cli.jar bin/openapi-generator-cli.jar
+
 CMD ["echo", "Hello World!"]
