@@ -8,10 +8,13 @@ cd psm-tools/pyclient
 
 2. Run the python3 environment to make client libraries
 ```
-# docker run -it -v ~/.psm:/root/.psm -v `pwd`:/pyclient pensando/pyclient:0.1 /bin/bash
-docker run -it -v ~/.psm:/root/.psm -v `pwd`:/pyclient registry.test.pensando.io:5000/pyclient:0.1 /bin/bash
+make run-container
+```
 
-make
+
+Inside the container run `make` to generate the api client.
+```
+root@6de26ac2cb83:/pyclient# make
 ```
 
 3. Run python client apps to confirm all is good
