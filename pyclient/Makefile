@@ -10,6 +10,7 @@ e2e:
 	make getswagger
 	make build-generator
 	make genclient
+	make tests
 
 getswagger:
 	python3 getswagger.py
