@@ -3,6 +3,7 @@ REGISTRY_URL ?= registry.test.pensando.io:5000
 PYCLIENT_CONTAINER ?= pyclient:0.2
 
 default:
+	mv /opt/openapi-generator-cli.jar bin
 	make getswagger
 	make genclient
 
@@ -31,3 +32,6 @@ clean:
 
 run-container:
 	docker run -it -v ~/.psm:/root/.psm -v `pwd`:/pyclient ${REGISTRY_URL}/${PYCLIENT_CONTAINER} /bin/bash
+
+build-container:
+	docker build -t ${REGISTRY_URL}/${PYCLIENT_CONTAINER} .
