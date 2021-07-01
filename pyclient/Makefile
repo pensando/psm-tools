@@ -1,9 +1,8 @@
 
 REGISTRY_URL ?= registry.test.pensando.io:5000
-PYCLIENT_CONTAINER ?= pyclient:0.2
+PYCLIENT_CONTAINER ?= pyclient:0.3
 
 default:
-	mkdir -p bin && mv /opt/openapi-generator-cli.jar bin
 	make getswagger
 	make genclient
 
