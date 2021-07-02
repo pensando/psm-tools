@@ -17,6 +17,6 @@ ENV PYTHONPATH=/pyclient
 
 COPY bin/openapi-generator-cli.jar /opt/openapi-generator-cli.jar
 
-CMD ["echo", "Hello World!"]
+ENTRYPOINT ["sh", "entrypoint.sh"]
+CMD ["/bin/bash"]
 
-ENTRYPOINT mkdir -p bin && mv /opt/openapi-generator-cli.jar bin && /bin/bash
