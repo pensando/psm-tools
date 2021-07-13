@@ -93,6 +93,6 @@ if args.label:
 
 
 if not workload_list:
-    print('There are no workloads matching the requirements.')
+    print('There are no workloads matching the descriptions.')
 if workload_list:
     print(workload_list)
